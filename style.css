@@ -1,0 +1,345 @@
+/* Forge 3D: engineering blueprint. Cyan lines on a navy drawing sheet. */
+
+:root {
+  --sheet: #0b1f3b;
+  --sheet-2: #102c52;
+  --line: #63d8ff;
+  --line-soft: rgba(99, 216, 255, 0.28);
+  --grid: rgba(99, 216, 255, 0.07);
+  --ink: #e3f7ff;
+  --muted: #8db3c9;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sheet: #071428;
+    --sheet-2: #0b1e3a;
+    --line: #8cecff;
+    --line-soft: rgba(140, 236, 255, 0.3);
+    --grid: rgba(140, 236, 255, 0.06);
+    --ink: #f0fbff;
+    --muted: #9fc4d8;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background-color: var(--sheet);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
+  background-position: -1px -1px;
+  font: 16px/1.6 var(--sans);
+  overflow-x: hidden;
+}
+
+a { color: var(--line); }
+a:focus-visible { outline: 2px solid var(--line); outline-offset: 3px; }
+img, svg { max-width: 100%; }
+
+.sheet { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+header.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font: 700 15px var(--mono);
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand i { font-style: normal; color: var(--line); }
+
+nav.main { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+nav.main a {
+  font: 13px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+}
+nav.main a:hover,
+nav.main a[aria-current="page"] { color: var(--line); border-bottom-color: var(--line); }
+
+.btn {
+  display: inline-block;
+  font: 600 14px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sheet);
+  background: var(--line);
+  padding: 12px 20px;
+  text-decoration: none;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+.btn.ghost {
+  color: var(--line);
+  background: transparent;
+  border: 1px solid var(--line);
+  clip-path: none;
+}
+
+.hero {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  padding: 44px 0 32px;
+}
+@media (min-width: 820px) {
+  .hero { grid-template-columns: 1.05fr 0.95fr; padding: 64px 0 48px; }
+}
+
+.eyebrow {
+  font: 13px var(--mono);
+  color: var(--line);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--line);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+h1 {
+  font: 700 clamp(30px, 5vw, 50px) / 1.1 var(--sans);
+  letter-spacing: -0.01em;
+  margin: 0.3em 0 0.4em;
+}
+h2 { font: 600 24px / 1.25 var(--sans); margin: 0 0 0.6em; }
+h3 { font: 600 18px / 1.3 var(--sans); margin: 0 0 0.4em; }
+p { margin: 0 0 1em; }
+p.lede { font-size: 18px; max-width: 36em; }
+.mono { font-family: var(--mono); }
+.muted { color: var(--muted); }
+
+section.block {
+  padding: 40px 0;
+  border-top: 1px dashed var(--line-soft);
+}
+
+.grid { display: grid; gap: 16px; }
+@media (min-width: 700px) {
+  .grid.c2 { grid-template-columns: repeat(2, 1fr); }
+  .grid.c3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card {
+  position: relative;
+  border: 1px solid var(--line-soft);
+  background: var(--sheet-2);
+  padding: 22px 20px 24px;
+}
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--line);
+  border-style: solid;
+  border-width: 0;
+}
+.card::before { left: -1px; top: -1px; border-left-width: 2px; border-top-width: 2px; }
+.card::after { right: -1px; bottom: -1px; border-right-width: 2px; border-bottom-width: 2px; }
+.card .tag {
+  display: inline-block;
+  font: 12px var(--mono);
+  color: var(--line);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.card p:last-child { margin-bottom: 0; }
+
+/* A leader line from a callout to a point in a drawing. */
+.callout {
+  position: relative;
+  padding-left: 22px;
+  border-left: 1px dashed var(--line);
+}
+.callout::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--sheet);
+}
+
+/* A dimension line with end ticks and a centred value. */
+.dim {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  font: 13px / 1.4 var(--mono);
+  color: var(--line);
+  text-align: center;
+}
+.dim::before,
+.dim::after {
+  content: "";
+  flex: 1 1 auto;
+  min-width: 12px;
+  height: 12px;
+  border-top: 1px solid var(--line);
+}
+.dim::before { border-left: 1px solid var(--line); }
+.dim::after { border-right: 1px solid var(--line); }
+.dim span { flex: 0 1 auto; }
+
+/* Numbered balloons, as on a drawing's part list. */
+ol.balloons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  counter-reset: step;
+}
+ol.balloons li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+ol.balloons li::before {
+  counter-increment: step;
+  content: counter(step);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font: 14px var(--mono);
+  color: var(--line);
+  background: var(--sheet-2);
+}
+
+/* The sheet's title block. */
+.tb {
+  display: grid;
+  grid-template-columns: 2.2fr 1.4fr 0.8fr 0.9fr 0.6fr;
+  border: 1px solid var(--line);
+  margin: 56px 0 28px;
+}
+.tb > div {
+  padding: 9px 12px;
+  border-right: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.tb > div:nth-child(5n) { border-right: 0; }
+.tb > div:nth-last-child(-n+5) { border-bottom: 0; }
+.tb span {
+  display: block;
+  font: 11px var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.tb b { font: 600 13px var(--mono); color: var(--ink); }
+@media (max-width: 640px) {
+  .tb { grid-template-columns: 1fr 1fr; }
+  .tb > div { border-right: 1px solid var(--line-soft); }
+  .tb > div:nth-child(2n) { border-right: 0; }
+  .tb > div:nth-last-child(-n+5) { border-bottom: 1px solid var(--line-soft); }
+  .tb > div:nth-last-child(-n+2) { border-bottom: 0; }
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+/* Spec rows: label in mono, value beside it. */
+dl.spec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--line-soft);
+}
+dl.spec > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+dl.spec dt { font: 12px var(--mono); color: var(--line); letter-spacing: 0.1em; text-transform: uppercase; }
+dl.spec dd { margin: 0; }
+@media (min-width: 700px) {
+  dl.spec > div { grid-template-columns: 200px 1fr; gap: 20px; }
+}
+
+.plan { display: block; width: 100%; height: auto; color: var(--line); }
+.plan text { font: 12px var(--mono); fill: var(--line); }
+.plan .ink { fill: var(--ink); }
+.plan .soft { stroke: var(--line-soft); }
+.plan .fill { fill: var(--sheet-2); }
+
+footer.foot {
+  font: 12px var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  padding-bottom: 24px;
+}
+
+/* agent-team: generated by scripts/seed/people/personas.mjs */
+.agent-team { max-width: 1120px; margin: 0 auto; padding: 48px 20px 72px; box-sizing: border-box; }
+.agent-team * { box-sizing: border-box; }
+.agent-team .at-eyebrow { margin: 0 0 8px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
+.agent-team .at-lede { max-width: 44em; margin: 16px 0 0; }
+.agent-team .at-group { margin-top: 40px; }
+.agent-team .at-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 28px 24px; margin-top: 16px; }
+.agent-team .at-card { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.agent-team .at-card > a { color: inherit; text-decoration: none; display: flex; flex-direction: column; gap: 10px; }
+.agent-team .at-card > a:hover h3 { text-decoration: underline; }
+.agent-team .at-card img, .agent-team .at-profile img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; display: block; background: rgba(127, 127, 127, 0.15); }
+.agent-team .at-card h3 { margin: 0; overflow-wrap: anywhere; }
+.agent-team .at-title { margin: 0; font-weight: 600; opacity: 0.85; }
+.agent-team .at-line { margin: 0; padding: 0; border: 0; background: none; }
+.ai-badge { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 1px 8px; border: 1px solid currentColor; border-radius: 999px; font-family: system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em; line-height: 1.5; text-transform: none; white-space: nowrap; opacity: 0.85; }
+.agent-team .at-note { margin: 0; font-size: 0.85rem; opacity: 0.75; }
+.agent-team .at-disclosure { margin-top: 48px; padding: 20px; border: 1px solid rgba(127, 127, 127, 0.4); border-radius: 10px; }
+.agent-team .at-profile { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 40px; align-items: start; }
+.agent-team .at-profile h1 { margin-top: 0; overflow-wrap: anywhere; }
+.agent-team .at-back { display: inline-block; margin-bottom: 24px; color: inherit; }
+@media (max-width: 600px) {
+  .agent-team { padding: 32px 16px 56px; }
+  .agent-team .at-cards { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .agent-team .at-card > a { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; align-items: center; }
+  .agent-team .at-profile { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .agent-team .at-profile img { max-width: 260px; }
+}
+/* end agent-team */

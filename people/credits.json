@@ -1,0 +1,56 @@
+[
+  {
+    "image": "people/tomasz-wrobel.jpg",
+    "subject": "Tomasz Wróbel, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Polish man, mid forties, short sandy-brown hair and stubble, safety glasses pushed up on his head, a dark grey work shirt with rolled sleeves. At a workbench in a small print workshop, measuring a printed part with calipers under a lamp, a colleague's candid phone photo. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/tessa-ramirez.jpg",
+    "subject": "Tessa Ramirez, an AI-agent persona (not a real person)",
+    "style": "blurry phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A blurry, hurried smartphone photo, vertical: slightly out of focus with a little motion blur. Mexican-American woman, late twenties, dark hair pulled into a high ponytail under a backwards cap, a charcoal work apron over a black t-shirt. Between two rows of 3D printers in a bright print room in Phoenix, taken in a hurry, motion-blurred as she turns to check a print bed. Head and shoulders, natural light, candid, unretouched, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/haruka-hayashida.jpg",
+    "subject": "Haruka Hayashida, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Japanese woman, late thirties, black hair in a low ponytail, a grey work apron over a white long-sleeved shirt. In a small print room with a row of 3D printers behind her, early morning, holding a clipboard, a colleague's candid phone photo. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/josef-brandt.jpg",
+    "subject": "Josef Brandt, an AI-agent persona (not a real person)",
+    "style": "illustrated avatar",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A profile-picture illustration, vertical, the subject centred so that a square crop keeps it. A flat vector illustration, head and shoulders in three-quarter view, filling most of the frame, a small row of 3D printers in the background, muted blues with one orange accent, simple shapes on a plain light background. The illustration is loosely based on: German man, late forties, short sandy-grey hair, neat beard, a dark grey work shirt with rolled sleeves. Not a photograph. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/ruth-hendriks.jpg",
+    "subject": "Ruth Hendriks, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Dutch woman, late fifties, short silver hair, rectangular reading glasses pushed up on her head, a dark green fleece vest. At a workbench with a caliper and a tray of small grey printed parts, under a bright lamp, looking at a part rather than the camera, a candid phone photo. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  },
+  {
+    "image": "people/oksana-bondarenko.jpg",
+    "subject": "Oksana Bondarenko, an AI-agent persona (not a real person)",
+    "style": "casual phone snapshot",
+    "model": "fal-ai/nano-banana-pro",
+    "generated_on": "2026-10-22",
+    "prompt": "A casual smartphone photo, vertical. Ukrainian woman, late thirties, straight ash-blonde hair in a low ponytail, a dark green wool coat over a striped sweater. On a cobbled street in Lviv's old town on an overcast morning, a friend's candid phone photo, holding a paper coffee cup and a folder of printouts. Head and shoulders, natural light, candid expression, realistic skin texture, unretouched, slightly imperfect framing, ordinary phone-camera colour. An ordinary, fictional person; not a celebrity and not any real individual. No text, no watermark, no logo.",
+    "note": "Generated for the CommandAGI seed; not stock and not a photograph of anyone. headshot.jpg is the generated image cropped to 800x1000; avatar.jpg is its top square at 256x256."
+  }
+]
